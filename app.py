@@ -2,7 +2,7 @@
 from flask import Flask, render_template, Response
 import cv2
 import get_qr
-import recog_face
+# import recog_face
 # Initialize the Flask app
 app = Flask(__name__)
 
@@ -36,9 +36,9 @@ def test():
     return Response(get_qr.capture_qr(camera=camera), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-@app.route('/face')
-def face():
-    return Response(recog_face.face(camera=camera), mimetype='multipart/x-mixed-replace; boundary=frame')
+# @app.route('/face')
+# def face():
+#     return Response(recog_face.face(camera=camera), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 if __name__ == "__main__":
